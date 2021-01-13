@@ -1,0 +1,58 @@
+<!-- 变量的引用 -->
+{{msg}}
+
+<!-- 小程序内没有原生的html标签，都是封装好的组件 -->
+<!-- for循环 item:数组元素  index:元素对应的索引 都是小程序自带的-->
+<view wx:for="{{arr}}" wx:key="index">
+  {{item}}----{{index}}
+</view>
+
+<!-- 起别名 :如果不想用小程序自带的item和index，可以通过 wx:for-xxx="xxx"自己起一个别名 -->
+<view wx:for="{{arr}}" wx:key="index" wx:for-item="value" wx:for-index="i">
+  {{i}}---{{value}}
+</view>
+
+<!-- if---else -->
+<view wx:if="{{num < 0}}">
+    num 小于 0
+</view>
+<view wx:elif="{{num == 0}}">
+  num = 0
+</view>
+<view wx:else="{{num > 0}}">
+  num > 0
+</view>
+
+<view wx:for="{{objArr}}" wx:key="index"> 
+  <text>{{item.name}} : </text>
+  <text>{{item.age}}</text>
+</view>
+
+<!-- block:该结构不会被渲染到页面中 -->
+<block wx:for="{{objArr}}" wx:key="index">
+  <text>{{item.name}} : </text>
+  <text>{{item.age}}</text>
+</block>
+
+<!-- 模板 -->
+<!-- 固定写死的数据模板 -->
+<template name="temp1">
+  <text>111</text>
+  <text>222</text>
+  <text>333</text>
+  <text>444</text>
+  <text>555</text>
+</template>
+<template is="temp1"></template>
+<!-- 通过传入数据时调用模板生成数据 -->
+<template name="temp2">
+  <text>姓名：{{name}}</text>
+  <text>年龄：{{age}}</text>
+</template>
+<template is="temp2" data="{{name: 'a',age: 66}}"></template>
+
+<import src="./temp3.wxml"></import>
+<template is="temp3" wx:for="{{objArr}}" wx:key="index" data="{{...item}}"></template>
+
+<!-- 绑定单击事件：bindtap="方法名" -->
+<button type="primary" bindtap="goOne">跳转到页面一</button>
