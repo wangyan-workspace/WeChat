@@ -1,0 +1,5 @@
+<view class="title">页面二</view>
+<wc>
+  <text slot="slot1">hello</text>
+  <text slot="slot2">world</text>
+</wc>

@@ -1,1 +1,14 @@
 <text>页面一111</text>
+{{num}}
+<button type="primary" bindtap="add1">+1</button>
+<!-- 事件传参 data-xxx="xxx" 通过e.target.dataset.xxx获取参数的值 -->
+<!-- <button type="warn" bindtap="add2" data-step="5">add</button> -->
+<!-- 参数外面的{{}} : 转换数据类型防止字符串的拼接 -->
+<button type="warn" bindtap="add2" data-step="{{5}}">add</button>
+
+<!-- 小程序中使用catchtap阻止事件冒泡 -->
+<view id="box1" bindtap="click1">box1
+  <view id="box2" catchtap="click2">box2
+    <view id="box3" bindtap="click3">box3</view>
+  </view>
+</view>

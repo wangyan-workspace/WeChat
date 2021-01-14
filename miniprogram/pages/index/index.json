@@ -1,5 +1,6 @@
 {
   "usingComponents": {},
   "enablePullDownRefresh": true,
-  "onReachBottomDistance": 10
+  "onReachBottomDistance": 10,
+  "navigationBarTitleText": "👀小程序入口😀"
 }
