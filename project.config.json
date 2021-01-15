@@ -67,6 +67,12 @@
         {
           "name": "two",
           "pathName": "pages/two/two",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "three",
+          "pathName": "pages/three/three",
           "scene": null
         }
       ]

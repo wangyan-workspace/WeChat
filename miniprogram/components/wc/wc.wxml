@@ -1,5 +1,12 @@
 <view class="title">
   <slot name="slot1"></slot>
-  组件
+  组件 ：{{str}}
   <slot name="slot2"></slot>
 </view>
+<!-- 子组件向父组件通信 -->
+<button type="primary" bindtap="send">o(*////▽////*)q</button>
+
+<!-- 数据监听器 -->
+{{num}}
+{{obj.age}}
+<button bindtap="add">+1</button>

@@ -5,7 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
+    msg:"lalala",
+    isShow: true
+  },
+  getMsg(e){
+    // console.log(666);
 
+    // console.log(e);
+
+    // 通过e.detail获取子组件传递过来的参数
+    // console.log(e.detail);
+
+    // 通过e.detail.xxx得到子组件向父组件传递的参数值
+    console.log(e.detail.msg);
+  },
+  change(){
+    this.setData({
+      isShow: !this.data.isShow,
+    })
   },
 
   /**
