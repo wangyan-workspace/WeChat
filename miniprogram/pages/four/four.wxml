@@ -1,0 +1,7 @@
+<view>页面四</view>
+<button bindtap="callCloudFn">调用云函数</button>
+<button bindtap="getCloudFn" type="primary">云函数获取数据</button>
+<button bindtap="updateCloudFn" type="warn">云函数更新数据</button>
+<input type="text" bindinput="getIptVal"/>
+<button bindtap="addCloudFn" type="primary">云函数添加数据</button>
+<button bindtap="deleteCloudFn" type="warn">云函数删除数据</button>

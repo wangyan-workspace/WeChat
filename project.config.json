@@ -40,6 +40,7 @@
   "appid": "wx8acbc4232fac4337",
   "projectname": "miniprogram",
   "libVersion": "2.14.1",
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {
     "plugin": {
       "list": []
@@ -73,6 +74,12 @@
         {
           "name": "three",
           "pathName": "pages/three/three",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "four",
+          "pathName": "pages/four/four",
           "scene": null
         }
       ]

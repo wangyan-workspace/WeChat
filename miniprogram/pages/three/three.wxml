@@ -1,5 +1,6 @@
 <input bindinput="getIptVal" type="text"/>
 <button bindtap="addHandle" type="primary">添加数据</button>
 <button bindtap="getHandle" type="warn">获取数据</button>
+<!-- 一次只能更新和删除一条数据 -->
 <button bindtap="updateHandle" type="primary">更新数据</button>
 <button bindtap="deleteHandle" type="warn">删除数据</button>
