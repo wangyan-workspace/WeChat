@@ -1,0 +1,25 @@
+<view class="add-box wrapper">
+  <!-- input输入框要绑定value值，才能实时更新输入框的数据 -->
+  <input value="{{iptVal}}" bindinput="getValue" type="text" placeholder="请输入💌..."/>
+  <button bindtap="add" class="add-btn" type="primary" size="mini">添加</button>
+</view>
+<view class="wrapper">
+  查看已完成事项
+  <switch changed="{{isDone}}" bindchange="isDonechange"></switch>
+</view>
+<view class="wrapper">
+  <view>序号</view>
+  <view class="thing">待办事项</view>
+  <view>操作</view>
+</view>
+<checkbox-group bindchange="checkChange">
+  <view class="wrapper" wx:for="{{todoList}}" wx:key="_id">
+  <view>{{index + 1}}</view>
+  <checkbox value="{{item._id}}"></checkbox>
+  <view class="thing">{{item.title}}</view>
+  <button wx:if="{{!isDone}}" type="primary" size="mini" bindtap="finish" data-id="{{item._id}}">完成</button>
+  <button wx:else="{{isDone}}" type="warn" size="mini" bindtap="delete" data-id="{{item._id}}">删除</button>
+</view>
+</checkbox-group>
+<button bindtap="batchHandle" data-type="finish" type="primary">批量完成</button>
+<button bindtap="batchHandle" data-type="delete" type="warn">批量删除</button>

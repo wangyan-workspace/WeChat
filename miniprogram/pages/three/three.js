@@ -56,7 +56,7 @@ Page({
   // 更新数据
   updateHandle(){
     // console.log(666);
-    fellow43_DB.where('023ce95560012d6c04866b3b295f2e04').update({
+    fellow43_DB.doc('023ce95560012d6c04866b3b295f2e04').update({
       data:{
         isShow: false
       }
