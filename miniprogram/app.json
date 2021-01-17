@@ -34,5 +34,7 @@
     "color": "#cccccc",
     "selectedColor": "#ab56ff"
   },
-  "style": "v2"
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index"
+  }
 }
